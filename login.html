@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - CoworkX</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <!-- Auth Container -->
+    <div class="auth-wrapper">
+        <div class="auth-layout">
+            <!-- SVG / Illustration side -->
+            <div class="auth-illustration">
+                <div class="auth-illustration-inner">
+                    <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="authLoginGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#e74c3c" />
+                                <stop offset="100%" stop-color="#3498db" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background blob -->
+                        <path
+                            d="M30 60C40 20 90 10 140 20C210 35 270 60 270 120C270 190 220 240 150 240C90 240 40 210 30 170C20 130 20 100 30 60Z"
+                            fill="url(#authLoginGradient)" opacity="0.2" />
+
+                        <!-- Card -->
+                        <rect x="55" y="60" rx="16" ry="16" width="190" height="130" fill="#ffffff" stroke="#f0f1f5" />
+
+                        <!-- Lock icon -->
+                        <circle cx="95" cy="105" r="18" fill="#eaf2ff" />
+                        <rect x="88" y="104" width="14" height="12" rx="3" fill="#e74c3c" />
+                        <path d="M91 104C91 98 94 95 95 95C98 95 101 98 101 104" stroke="#e74c3c" stroke-width="3"
+                            stroke-linecap="round" />
+
+                        <!-- Lines representing activity -->
+                        <rect x="130" y="84" width="70" height="8" rx="4" fill="#f3f4f6" />
+                        <rect x="130" y="102" width="90" height="8" rx="4" fill="#f3f4f6" />
+                        <rect x="75" y="135" width="140" height="10" rx="5" fill="#f3f4f6" />
+                        <rect x="75" y="155" width="120" height="10" rx="5" fill="#f3f4f6" />
+
+                        <!-- Accent pill -->
+                        <rect x="110" y="185" width="60" height="16" rx="8" fill="#e74c3c" opacity="0.9" />
+                    </svg>
+                </div>
+                <div class="auth-illustration-copy">
+                    <h1>Welcome back</h1>
+                    <p>Log in to continue where you left off with your workspaces.</p>
+                </div>
+            </div>
+
+            <!-- Login form side -->
+            <div class="auth-container">
+                <div class="form-box">
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Log in to access your Account</p>
+
+                    <!-- Login Form -->
+                    <form id="login-form" class="auth-form">
+                        <!-- Email Input -->
+                        <div class="form-row">
+                            <input type="email" id="login-email" name="email" placeholder="Email Address" required>
+                            <span class="error" id="login-email-error"></span>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-row">
+                            <input type="password" id="login-password" name="password" placeholder="Password" required>
+                            <span class="error" id="login-password-error"></span>
+                        </div>
+
+                        <!-- Success/Error Message -->
+                        <div id="login-message"></div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn">Log In</button>
+                    </form>
+
+                    <!-- Link to Signup -->
+                    <p class="change">Don't have an account? <a href="index.html">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/auth/auth.js"></script>
+</body>
+
+</html>

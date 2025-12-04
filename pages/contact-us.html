@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoworkX-Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/contact_us.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    </head>
+
+    <body>
+
+        <!-- Header for CoworkX  -->
+        <header class="navbar">
+            <div class="navbar__container">
+                <a href="./home.html" class="navbar__brand">CoworkX</a>
+                <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation"
+                    aria-controls="navbarMenu" aria-expanded="false">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+                <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="./home.html" class="navbar__link">Home</a></li>
+                        <li class="navbar__item"><a href="../pages/spaces.html" class="navbar__link">Spaces</a></li>
+                        <li class="navbar__item"><a href="../pages/summary.html" class="navbar__link">Summary</a></li>
+                        <li class="navbar__item"><a href="../pages/contact-us.html" class="navbar__link"
+                                id="active">Contact
+                                Us</a></li>
+                        <li class="navbar__item navbar__item--cta"><a href="../index.html"
+                                class="navbar__link navbar__link--cta">Log
+                                out</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="contact-section">
+
+            <!-- Header -->
+            <div class="section-header">
+                <h1>Get in Touch</h1>
+                <p>Ready to book your desk or have a question about our space? <br>Reach out to us and we'll get back to
+                    you shortly.</p>
+            </div>
+
+            <div class="container">
+
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Erlis Bunjaku"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="erlis@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control"
+                                placeholder="Membership Inquiry">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Contact Info -->
+                <div class="contact-info-wrapper">
+
+                    <!-- Address -->
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Our Location</h3>
+                            <p>123 Innovation Blvd, Suite 400</p>
+                            <p>Tech District, NY 10012</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone & Email -->
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Contact Details</h3>
+                            <p><a href="tel:+15550199">+1 (555) 019-2024</a></p>
+                            <p><a href="mailto:hello@coworkspace.com">hello@coworkspace.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>Mon - Fri: 8:00 AM - 8:00 PM</p>
+                            <p>Sat - Sun: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="info-card"
+                        style="align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+                        <div class="info-content">
+                            <h3>Follow Us</h3>
+                            <p>Stay updated with our latest events.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Map Section  -->
+            <div class="map-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425879.2328935363!2d20.924564857146075!3d42.66754211339567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354d66376470d61%3A0x822d0bbd15bf0b02!2sPrishtina%2C%20Kosovo!5e0!3m2!1sen!2sus!4v1701700000000!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+
+        </section>
+
+
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <a href="#" class="footer__logo">CoworkX</a>
+                        <p>Workspaces that blend thoughtful design, reliable tech, and a welcoming community so your
+                            team
+                            can
+                            stay focused on what matters.</p>
+                    </div>
+
+                    <div class="footer__columns">
+                        <div class="footer__column">
+                            <h4>Navigate</h4>
+                            <ul>
+                                <li><a href="./home.html">Home</a></li>
+                                <li><a href="./spaces.html">Spaces</a></li>
+                                <li><a href="./summary.html">Summary</a></li>
+                                <li><a href="./contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4>Visit</h4>
+                            <ul>
+                                <li><a href="#">Find a location</a></li>
+                                <li><a href="#">Schedule a tour</a></li>
+                                <li><a href="#">Partnerships</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4>Connect</h4>
+                            <ul>
+                                <li><a href="mailto:hello@coworkx.com">hello@coworkx.com</a></li>
+                                <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <p>© <span id="year"></span> CoworkX. All rights reserved.</p>
+                    <div class="footer__links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Ngarkon librarinë EmailJS nga CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+        <script>
+            emailjs.init('ktzDfW8JnYUXzToi7');
+        </script>
+
+        <script>
+            // Merr formularin me ID 'contact-form' dhe i shton event listener për 'submit'
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault(); // Parandalon që forma të dërgohet në mënyrë tradicionale (refresh i faqes)
+
+                // Përdor EmailJS për të dërguar formën
+                emailjs.sendForm('service_dv0tt69', 'template_0qldw18', this)
+                    .then(function () {
+                        // Nëse mesazhi u dërgua me sukses
+                        alert('Message sent successfully!');
+                        document.getElementById('contact-form').reset(); // Pastron të gjitha input-et e formës
+                    }, function (error) {
+                        // Nëse ka ndodhur ndonjë gabim
+                        console.error('FAILED...', error);
+                        alert('Oops! Something went wrong.');
+                    });
+            });
+        </script>
+
+
+
+
+        <script src="../js/main.js"></script>
+
+
+    </body>
+
+</html>

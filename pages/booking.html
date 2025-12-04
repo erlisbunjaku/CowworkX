@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Space - CoworkX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header for CoworkX  -->
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="./home.html" class="navbar__brand">CoworkX</a>
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-controls="navbarMenu"
+                aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="./home.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="./spaces.html" class="navbar__link" id="active">Spaces</a></li>
+                    <li class="navbar__item"><a href="./summary.html" class="navbar__link">Summary</a></li>
+                    <li class="navbar__item"><a href="./contact-us.html" class="navbar__link">Contact Us</a></li>
+                    <li class="navbar__item navbar__item--cta"><a href="../index.html"
+                            class="navbar__link navbar__link--cta">Log
+                            out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="booking-page">
+        <div class="container">
+            <div class="booking-wrapper">
+                <!-- Booking Form Section -->
+                <div class="booking-form-section">
+                    <div class="booking-header">
+                        <h1>Book Your Space</h1>
+                        <p id="booking-space-name">Loading space details...</p>
+                    </div>
+
+                    <form id="booking-form" class="booking-form">
+                        <!-- Date Selection -->
+                        <div class="form-group">
+                            <label for="booking-date">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                Select Date
+                            </label>
+                            <input type="date" id="booking-date" name="date" required>
+                            <span class="error" id="date-error"></span>
+                        </div>
+
+                        <!-- Time Slot Selection -->
+                        <div class="form-group">
+                            <label for="booking-time">
+                                <i class="fa-solid fa-clock"></i>
+                                Select Time Slot
+                            </label>
+                            <select id="booking-time" name="time" required>
+                                <option value="">Choose a time slot</option>
+                                <option value="09:00">9:00 AM - 12:00 PM</option>
+                                <option value="12:00">12:00 PM - 3:00 PM</option>
+                                <option value="15:00">3:00 PM - 6:00 PM</option>
+                                <option value="18:00">6:00 PM - 9:00 PM</option>
+                                <option value="full-day">Full Day (9:00 AM - 9:00 PM)</option>
+                            </select>
+                            <span class="error" id="time-error"></span>
+                        </div>
+
+                        <!-- Number of People -->
+                        <div class="form-group">
+                            <label for="booking-people">
+                                <i class="fa-solid fa-users"></i>
+                                Number of People
+                            </label>
+                            <input type="number" id="booking-people" name="people" min="1" max="20" value="1" required>
+                            <span class="error" id="people-error"></span>
+                        </div>
+
+                        <!-- Duration Selection -->
+                        <div class="form-group">
+                            <label for="booking-duration">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                Duration
+                            </label>
+                            <select id="booking-duration" name="duration" required>
+                                <option value="">Select duration</option>
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                            <span class="error" id="duration-error"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="booking-submit-btn">
+                            <i class="fa-solid fa-check"></i>
+                            Confirm Booking
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Review Summary Section -->
+                <div class="booking-summary-section">
+                    <div class="summary-card">
+                        <h2>Booking Summary</h2>
+
+                        <div class="summary-space-info">
+                            <div class="summary-space-image" id="summary-image">
+                                <!-- Image loaded by JS -->
+                            </div>
+                            <div class="summary-space-details">
+                                <h3 id="summary-name">-</h3>
+                                <p id="summary-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>-</span>
+                                </p>
+                                <div class="summary-rating" id="summary-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <div class="summary-details">
+                            <div class="summary-item">
+                                <span class="summary-label">Date:</span>
+                                <span class="summary-value" id="summary-date">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Time:</span>
+                                <span class="summary-value" id="summary-time">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">People:</span>
+                                <span class="summary-value" id="summary-people">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Duration:</span>
+                                <span class="summary-value" id="summary-duration">-</span>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <div class="summary-price">
+                            <div class="summary-price-row">
+                                <span class="summary-label">Base Price:</span>
+                                <span class="summary-value" id="summary-base-price">$0</span>
+                            </div>
+                            <div class="summary-price-row">
+                                <span class="summary-label">People (x<span id="summary-people-count">1</span>):</span>
+                                <span class="summary-value" id="summary-people-price">$0</span>
+                            </div>
+                            <div class="summary-price-row summary-total">
+                                <span class="summary-label">Total:</span>
+                                <span class="summary-value" id="summary-total-price">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">CoworkX</a>
+                    <p>Workspaces that blend thoughtful design, reliable tech, and a welcoming community so your team
+                        can
+                        stay focused on what matters.</p>
+                </div>
+
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="./spaces.html">Spaces</a></li>
+                            <li><a href="./summary.html">Summary</a></li>
+                            <li><a href="./contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Visit</h4>
+                        <ul>
+                            <li><a href="#">Find a location</a></li>
+                            <li><a href="#">Schedule a tour</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:hello@coworkx.com">hello@coworkx.com</a></li>
+                            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> CoworkX. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/spaces/spaces.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+
+</html>

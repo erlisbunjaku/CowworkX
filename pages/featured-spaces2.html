@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoworkX - Unity Tech Hub Vushtrri</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/featured-spaces.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header for CoworkX  -->
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="./home.html" class="navbar__brand">CoworkX</a>
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-controls="navbarMenu"
+                aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="./home.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="./spaces.html" class="navbar__link" id="active">Spaces</a></li>
+                    <li class="navbar__item"><a href="./summary.html" class="navbar__link">Summary</a></li>
+                    <li class="navbar__item"><a href="./contact-us.html" class="navbar__link">Contact Us</a></li>
+                    <li class="navbar__item navbar__item--cta"><a href="../index.html"
+                            class="navbar__link navbar__link--cta">Log
+                            out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="space-details-page">
+        <section class="space-details-hero">
+            <div class="space-details-hero__image" id="space-hero-image">
+
+            </div>
+            <div class="space-details-hero__overlay"></div>
+            <div class="space-details-hero__content">
+                <div class="container">
+                    <h1 class="space-details-hero__title" id="space-hero-name">Vushtrri Unity Tech Hub</h1>
+                    <div class="space-details-hero__meta">
+                        <div class="space-details-hero__location" id="space-hero-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Vushtrri</span>
+                        </div>
+                        <div class="space-details-hero__rating" id="space-hero-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.3</span>
+                        </div>
+                        <div class="space-details-hero__price" id="space-hero-price">
+                            <span class="price-amount">$85</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-details-content">
+            <div class="container">
+                <div class="space-details-wrapper">
+                    <div class="space-details-main">
+                        <div class="space-details-header">
+                            <h1 class="space-details-name" id="space-name">Vushtrri Workspace</h1>
+                            <div class="space-details-meta">
+                                <div class="space-details-location" id="space-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Vushtrri</span>
+                                </div>
+                                <div class="space-details-rating" id="space-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>4.3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="space-details-divider">
+
+                        <div class="space-details-description">
+                            <h2 class="space-details-section-title">About This Space</h2>
+                            <p class="space-details-text" id="space-description">
+                                Modern coworking space in the heart of Vushtrri with flexible seating and meeting rooms.
+                            </p>
+                        </div>
+
+                        <div class="space-details-features">
+                            <h2 class="space-details-section-title">Amenities & Features</h2>
+                            <div class="space-features-grid" id="space-features">
+                                <!-- Features will be loaded by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-details-sidebar">
+                        <div class="space-booking-card">
+                            <div class="space-booking-price">
+                                <span class="price-amount" id="space-price">$85</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <a href="./booking.html" class="space-booking-button">Book Now</a>
+                            <div class="space-booking-info">
+                                <div class="booking-info-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>Instant Booking Available</span>
+                                </div>
+                                <div class="booking-info-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>24/7 Access</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">CoworkX</a>
+                    <p>Workspaces that blend thoughtful design, reliable tech, and a welcoming community so your team
+                        can
+                        stay focused on what matters.</p>
+                </div>
+
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="./spaces.html">Spaces</a></li>
+                            <li><a href="./summary.html">Summary</a></li>
+                            <li><a href="./contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Visit</h4>
+                        <ul>
+                            <li><a href="#">Find a location</a></li>
+                            <li><a href="#">Schedule a tour</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:hello@coworkx.com">hello@coworkx.com</a></li>
+                            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> CoworkX. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/featured-spaces/featured-spaces2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoworkX - Spaces</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/spaces.css">
+</head>
+
+<body>
+
+    <!-- Header for CoworkX  -->
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="./home.html" class="navbar__brand">CoworkX</a>
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-controls="navbarMenu"
+                aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="./home.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="./spaces.html" class="navbar__link" id="active">Spaces</a></li>
+                    <li class="navbar__item"><a href="./summary.html" class="navbar__link">Summary</a></li>
+                    <li class="navbar__item"><a href="./contact-us.html" class="navbar__link">Contact Us</a></li>
+                    <li class="navbar__item navbar__item--cta"><a href="../index.html"
+                            class="navbar__link navbar__link--cta">Log
+                            out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="spaces-page">
+        <section class="spaces-header">
+            <div class="container">
+                <h1 class="spaces-title">Explore Coworking Spaces in Kosovo</h1>
+                <p class="spaces-subtitle">Discover premium workspaces across 12 cities in Kosovo</p>
+
+
+                <div class="spaces-stats">
+                    <div class="stat-box">
+                        <h2 class="stat-number">25+</h2>
+                        <p class="stat-label">Available Workspaces</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2 class="stat-number">8+</h2>
+                        <p class="stat-label">Cities Covered</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="spaces-content">
+            <div class="container">
+                <div class="filter-section">
+                    <h2 class="filter-title">Filter by City</h2>
+                    <select id="city-filter" class="city-filter">
+                        <option value="Vushtrri" selected>Vushtrri</option>
+                        <option value="Prishtina">Prishtina</option>
+                        <option value="Prizren">Prizren</option>
+                        <option value="Peja">Peja</option>
+                        <option value="Gjakova">Gjakova</option>
+                        <option value="Ferizaj">Ferizaj</option>
+                        <option value="Mitrovica">Mitrovica</option>
+                        <option value="Gjilan">Gjilan</option>
+                        <option value="Podujeva">Podujeva</option>
+                        <option value="Suhareka">Suhareka</option>
+                        <option value="Lipjan">Lipjan</option>
+                        <option value="Rahovec">Rahovec</option>
+                    </select>
+                </div>
+
+                <div id="spaces-grid" class="spaces-grid">
+
+                </div>
+
+                <div id="no-spaces-message" class="no-spaces-message" style="display: none;">
+                    <div class="no-spaces-icon">
+                        <i class="fa-solid fa-building-circle-xmark"></i>
+                    </div>
+                    <p>No spaces available in this city yet.</p>
+                    <p class="no-spaces-subtext">Check back soon or explore other cities!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">CoworkX</a>
+                    <p>Workspaces that blend thoughtful design, reliable tech, and a welcoming community so your team
+                        can
+                        stay focused on what matters.</p>
+                </div>
+
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="./spaces.html">Spaces</a></li>
+                            <li><a href="./summary.html">Summary</a></li>
+                            <li><a href="./contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Visit</h4>
+                        <ul>
+                            <li><a href="#">Find a location</a></li>
+                            <li><a href="#">Schedule a tour</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:hello@coworkx.com">hello@coworkx.com</a></li>
+                            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> CoworkX. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/spaces/spaces.js"></script>
+</body>
+
+</html>
