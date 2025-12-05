@@ -8,7 +8,7 @@ spaceId = urlParams.get("id");// merr vlerën e parametrit "id"
 
 // Nëse nuk ka ID, kthehu te faqja e hapësirave
 if (!spaceId) {
-  alert("No space selected. Going back to spaces page.");
+  alert("A booking already exists. Returning to the spaces page.");
   window.location.href = "./spaces.html";
 }
 
@@ -21,12 +21,6 @@ if (typeof spaces !== 'undefined') {
       break; // ndalon loop sapo të gjejë hapësirën e duhur
     }
   }
-}
-
-// Nëse hapësira nuk u gjet, kthehu prapa
-if (!selectedSpace) {
-  alert("Space not found. Going back to spaces page.");
-  window.location.href = "./spaces.html";
 }
 
 // Vendos sot si datë minimale për rezervim

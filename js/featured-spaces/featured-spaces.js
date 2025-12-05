@@ -5,7 +5,7 @@ const spaceDetails = {
   city: "Vushtrri",
   image: "../images/office_images/vushtrri_office_1.jpg",
   description:
-    "Modern coworking space in the heart of Vushtrri with flexible seating and meeting rooms...",
+    "Modern coworking space in the heart of Vushtrri with flexible seating and meeting rooms designed to support freelancers, startups, and small teams. Enjoy high-speed internet, comfortable workstations, private call booths, and a calm environment that boosts productivity.",
   rating: 4.3,
   price: 85,
   features: [
