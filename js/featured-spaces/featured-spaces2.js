@@ -5,7 +5,7 @@ const spaceDetails = {
   city: "Vushtrri",
   image: "../images/office_images/vushtrri_office_2.jpg",
   description:
-    "Unity Tech Hub in Vushtrri is a modern, community-driven workspace...",
+    "Unity Tech Hub in Vushtrri is a modern, community-driven workspace designed to bring together freelancers, students, startups, and tech enthusiasts. With flexible desks, meeting rooms, workshops, and networking events, it’s the ideal place to collaborate, learn, and build new ideas.",
   rating: 4.6,
   price: 70,
   features: [

@@ -1,7 +1,7 @@
 // Array me të gjitha hapsirat e coworking që do të shfaqen në faqe
 const spaces = [
   {
-    id: "corworkspace1",
+    id: "prishtina1",
     name: "CoR Workspace",
     city: "Prishtina",
     image: "../images/office_images/prishtina_office_1.jpg",
@@ -9,8 +9,8 @@ const spaces = [
       "Modern coworking space with private offices, meeting rooms, and fast internet.",
     rating: 4.8,
     price: 120,
-    link: "#",
-  },
+    link: "./featured-spaces4.html",
+  },  
   {
     id: "techhub1",
     name: "TechHub Prishtina",
@@ -20,7 +20,7 @@ const spaces = [
       "Innovative workspace designed for tech startups and digital nomads.",
     rating: 4.9,
     price: 150,
-    link: "#",
+    link: "./featured-spaces5.html",
   },
   {
     id: "creative1",
@@ -42,7 +42,7 @@ const spaces = [
       "Historic city center location with modern amenities and beautiful views.",
     rating: 4.7,
     price: 130,
-    link: "#",
+    link: "./featured-spaces6.html",
   },
   {
     id: "prizren2",
@@ -75,7 +75,7 @@ const spaces = [
       "Scenic coworking space with mountain views and premium amenities.",
     rating: 4.6,
     price: 125,
-    link: "#",
+    link: "./featured-spaces7.html",
   },
   {
     id: "gjakova1",
@@ -86,7 +86,7 @@ const spaces = [
       "Professional workspace in the heart of Gjakova with meeting facilities.",
     rating: 4.5,
     price: 115,
-    link: "#",
+    link: "./featured-spaces8.html",
   },
   {
     id: "gjakova2",
@@ -107,7 +107,7 @@ const spaces = [
     description: "Modern coworking space with flexible plans and 24/7 access.",
     rating: 4.3,
     price: 95,
-    link: "#",
+    link: "./featured-spaces9.html",
   },
   {
     id: "ferizaj2",
@@ -307,6 +307,7 @@ const spaces = [
     price: 125,
     link: "#",
   },
+
 ];
 
 // Funksion që shfaq kartat e coworking spaces në grid

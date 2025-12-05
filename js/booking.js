@@ -23,28 +23,36 @@ if (typeof spaces !== 'undefined') {
   }
 }
 
-// Vendos sot si datë minimale për rezervim
-const today = new Date();
-const todayString = today.getFullYear() + "-" +
-                   String(today.getMonth() + 1).padStart(2, "0") + "-" +
-                   String(today.getDate()).padStart(2, "0");
-document.getElementById("booking-date").setAttribute("min", todayString);
+// Ensure we have a selected space before continuing
+if (!selectedSpace) {
+  console.error(`Space with id="${spaceId}" not found in spaces array.`);
+  const titleEl = document.getElementById("booking-space-name");
+  if (titleEl) titleEl.textContent = "Space not found";
+  alert('Space not found. Returning to the spaces listing.');
+  window.location.href = "./spaces.html";
+} else {
+  // Vendos sot si datë minimale për rezervim
+  const today = new Date();
+  const todayString = today.getFullYear() + "-" +
+                     String(today.getMonth() + 1).padStart(2, "0") + "-" +
+                     String(today.getDate()).padStart(2, "0");
+  document.getElementById("booking-date").setAttribute("min", todayString);
 
-// Shfaq informacionin e hapësirës në faqe
-document.getElementById("booking-space-name").textContent = selectedSpace.name;
-document.getElementById("summary-name").textContent = selectedSpace.name;
-document.getElementById("summary-location").querySelector("span").textContent = selectedSpace.city;
-document.getElementById("summary-rating").querySelector("span").textContent = selectedSpace.rating;
+  // Shfaq informacionin e hapësirës në faqe
+  document.getElementById("booking-space-name").textContent = selectedSpace.name;
+  document.getElementById("summary-name").textContent = selectedSpace.name;
+  document.getElementById("summary-location").querySelector("span").textContent = selectedSpace.city;
+  document.getElementById("summary-rating").querySelector("span").textContent = selectedSpace.rating;
 
-// Shton imazhin e hapësirës në faqe
-const img = document.createElement("img");
-img.src = selectedSpace.image;
-img.alt = selectedSpace.name;
-img.onerror = function() {
-  // Nëse imazhi nuk ngarkohet, vendos foto fallback
-  this.src = "../images/banner_img.jpg";
-};
-document.getElementById("summary-image").appendChild(img);
+  // Shton imazhin e hapësirës në faqe
+  const img = document.createElement("img");
+  img.src = selectedSpace.image;
+  img.alt = selectedSpace.name;
+  img.onerror = function() {
+    // Nëse imazhi nuk ngarkohet, vendos foto fallback
+    this.src = "../images/banner_img.jpg";
+  };
+  document.getElementById("summary-image").appendChild(img);
 
 // Funksion që përditëson përmbledhjen kur ndryshohen input-et
 function updateSummary() {
@@ -248,5 +256,7 @@ document.getElementById("booking-form").addEventListener("submit", function(e) {
   window.location.href = "./spaces.html";
 });
 
-// Llogarit çmimin sapo faqja të ngarkohet
-calculatePrice();
+  // Llogarit çmimin sapo faqja të ngarkohet
+  calculatePrice();
+
+} // end else (selectedSpace)

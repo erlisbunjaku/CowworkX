@@ -1,28 +1,26 @@
-// Objekt që përmban të gjitha detajet për hapësirën CoWork Vushtrri
+// Objekt që përmban të gjitha të dhënat për hapësirën e coworking në Prishtine
 const spaceDetails = {
-  id: "vushtrri1",
-  name: "CoWork Vushtrri",
-  city: "Vushtrri",
-  image: "../images/office_images/vushtrri_office_3.jpg",
+  id: "prizren1",
+  name: "Prizren Workspace",
+  city: "Prizren",
+  image: "../images/office_images/prizren_office_1.jpg",
   description:
-    "",
-  rating: 4.1,
-  price: 80,
+    "Prizren Workspace is a modern, community-focused coworking hub designed for freelancers, entrepreneurs, and small teams who want a productive and inspiring place to work. With flexible desks, private meeting rooms, and fast WiFi, it offers everything you need to stay focused and get things done.",
+  rating: 4.7,
+  price: 130,
   features: [
     "High-Speed WiFi",
     "Meeting Room",
     "Flexible Seating",
     "24/7 Access",
-    "Kitchen Facilities",
-    "Coffee & Tea",
     "Parking Available"
   ]
 };
 
-// Funksion që vendos të gjitha të dhënat në elementet e HTML-it
+// Funksion që vendos të dhënat në elementet e HTML-it
 function renderSpaceDetails() {
 
-  // Marrim elementet që do t’i mbushim me të dhëna
+  // Marrim elementet ku do të shfaqen informacionet
   const heroImage = document.getElementById("space-hero-image");
   const heroName = document.getElementById("space-hero-name");
   const heroLocation = document.getElementById("space-hero-location");
@@ -35,13 +33,13 @@ function renderSpaceDetails() {
   const spacePrice = document.getElementById("space-price");
   const spaceFeatures = document.getElementById("space-features");
 
-  // Vendosim foton kryesore (hero image)
+  // Vendosim foton kryesore
   if (heroImage) {
     const img = document.createElement("img");
-    img.src = spaceDetails.image; // vendos linkun e fotos
+    img.src = spaceDetails.image;
     img.alt = spaceDetails.name;
 
-    // Në rast se foto nuk ngarkohet → vendos një foto default
+    // Nëse foto nuk ngarkohet → vendos foto default
     img.onerror = function () {
       this.src = "../images/banner_img.jpg";
     };
@@ -54,7 +52,7 @@ function renderSpaceDetails() {
     heroName.textContent = spaceDetails.name;
   }
 
-  // Vendos qytetin në seksionin hero
+  // Vendos qytetin në seksionin e sipërm
   if (heroLocation) {
     const locationSpan = heroLocation.querySelector("span");
     if (locationSpan) {
@@ -78,12 +76,12 @@ function renderSpaceDetails() {
     }
   }
 
-  // Vendos emrin e hapësirës në seksionin e plotë detajesh (poshtë)
+  // Vendos emrin e hapësirës në seksionin e poshtëm
   if (spaceName) {
     spaceName.textContent = spaceDetails.name;
   }
 
-  // Vendos qytetin në seksionin e detajeve
+  // Vendos qytetin në seksionin e poshtëm
   if (spaceLocation) {
     const locationSpan = spaceLocation.querySelector("span");
     if (locationSpan) {
@@ -91,7 +89,7 @@ function renderSpaceDetails() {
     }
   }
 
-  // Vendos rating-un në seksionin e detajeve
+  // Vendos rating-un në seksionin e poshtëm
   if (spaceRating) {
     const ratingSpan = spaceRating.querySelector("span");
     if (ratingSpan) {
@@ -99,21 +97,21 @@ function renderSpaceDetails() {
     }
   }
 
-  // Vendos përshkrimin e hapësirës
+  // Vendos përshkrimin
   if (spaceDescription) {
     spaceDescription.textContent = spaceDetails.description;
   }
 
-  // Vendos çmimin në seksionin e detajeve
+  // Vendos çmimin
   if (spacePrice) {
     spacePrice.textContent = `$${spaceDetails.price}`;
   }
 
-  // Krijon listën dinamike me veçoritë (features)
+  // Krijon dhe shfaq listën e veçorive (features)
   if (spaceFeatures) {
     spaceFeatures.innerHTML = ""; // pastrojmë listën ekzistuese
 
-    // Për çdo veçori krijohet një element HTML dhe shtohet në listë
+    // Për secilën veçori krijojmë një element HTML
     spaceDetails.features.forEach((feature) => {
       const featureItem = document.createElement("div");
       featureItem.className = "space-feature-item";
@@ -121,12 +119,13 @@ function renderSpaceDetails() {
         <i class="fa-solid fa-check"></i>
         <span>${feature}</span>
       `;
+
       spaceFeatures.appendChild(featureItem);
     });
   }
 }
 
-// Kur faqja ngarkohet plotësisht → thirr funksionin për të shfaqur detajet
+// Kur faqja të jetë ngarkuar → thirr funksionin për të shfaqur detajet
 document.addEventListener("DOMContentLoaded", function () {
   renderSpaceDetails();
 });
